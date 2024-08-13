@@ -34,8 +34,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 [![wakatime repo](https://wakatime.com/badge/github/Erik-42/openclassroom-projet_13-argentbank.svg)](https://wakatime.com/badge/github/Erik-42/openclassroom-projet_13-argentbank)
-[![wakatime projet](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/5c6b2898-3dc9-431c-aeb2-d0bea2922d5c.svg)](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/5c6b2898-3dc9-431c-aeb2-d0bea2922d5c)
-
+[![wakatime](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/0b18637a-df2f-46f6-93e5-574433068892.svg)](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/0b18637a-df2f-46f6-93e5-574433068892)
 </div>
 Utilisez une API pour un compte utilisateur bancaire avec React
 <p></p>
@@ -130,6 +129,20 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 Github: [https://erik-42.github.io/openclassroom-projet_13-argentbank/](https://erik-42.github.io/openclassroom-projet_13-argentbank/)
+
+mongodb+srv://<argentbank>:<argentbankOc-2024>@cluster0.m486stl.mongodb.net/
+MongoDB argentbank argentbankOc-2024
+api key uniQdi5348f6tFLxZrHMRzF5KiNkOpPp2YZSoyQz0hcfjk4y3bjv7ea3PplY8RVd
+curl --location --request POST 'https://eu-west-2.aws.data.mongodb-api.com/app/data-napsbyn/endpoint/data/v1/action/findOne' \
+--header 'Content-Type: application/json' \
+--header 'Access-Control-Request-Headers: *' \
+--header 'api-key: uniQdi5348f6tFLxZrHMRzF5KiNkOpPp2YZSoyQz0hcfjk4y3bjv7ea3PplY8RVd' \
+--data-raw '{
+    "collection":"<formationOC>",
+    "database":"<argentbank>",
+    "dataSource":"Cluster0",
+    "projection": {"_id": 1}
+}'
 
 https://editor.swagger.io/
 
