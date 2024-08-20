@@ -4,6 +4,7 @@ import { Home } from './pages/home'
 import { Signin } from './pages/signin'
 import { Dashboard } from './pages/dashboard'
 
+
 function App() {
 
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path='/dashboard' element={<Dashboard></Dashboard>}/>
     </Routes>
     </BrowserRouter>
+   
   )
 }
 

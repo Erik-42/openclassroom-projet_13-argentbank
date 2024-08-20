@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux'
+import { setToken, removeToken } from '../store/tokenSlice'
 
 export  function Home() {
+  const token = useSelector((state) => state.token.token)
+  const dispatch = useDispatch()
+
   return (
     <>
 <nav className="main-nav">
@@ -22,6 +27,12 @@ export  function Home() {
 
     <main>
       <div className="hero">
+        <div>
+token={token} 
+<button onClick={()=>dispatch(setToken("hello World"))}>setToken</button>
+<button onClick={()=>dispatch(removeToken())}>removeToken</button>
+
+        </div>
         <section className="hero-content">
           <h2 className="sr-only">Promoted Content</h2>
           <p className="subtitle">No fees.</p>

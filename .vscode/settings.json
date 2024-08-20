@@ -1,0 +1,9 @@
+{
+    "editor.defaultFormatter": "svipas.prettier-plus",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "eslint.format.enable": true,
+    "cSpell.autoFormatConfigFile": true,
+    "notebook.defaultFormatter": "svipas.prettier-plus",
+    "notebook.formatOnSave.enabled": true
+}
