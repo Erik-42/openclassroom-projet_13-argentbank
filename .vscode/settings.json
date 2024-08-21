@@ -5,5 +5,7 @@
     "eslint.format.enable": true,
     "cSpell.autoFormatConfigFile": true,
     "notebook.defaultFormatter": "svipas.prettier-plus",
-    "notebook.formatOnSave.enabled": true
+    "notebook.formatOnSave.enabled": true,
+    "notebook.formatOnCellExecution": true,
+    "files.autoSave": "onFocusChange"
 }

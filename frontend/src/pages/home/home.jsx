@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
-import { setToken, removeToken } from '../store/tokenSlice'
+import { setToken, removeToken } from '../../slice/tokenSlice'
+import HeroBanner from '../../components/heroBanner/heroBanner'
+import header from '../../components/header/header';
 
 export  function Home() {
   const token = useSelector((state) => state.token.token)

@@ -1,0 +1,33 @@
+$color-primary: #00bc77;
+$color-secondary: #12002b;
+$color-text: #2c3e50;
+$color-text-dark: #222;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  &nav__logo {
+    display: flex;
+    align-items: center;
+  }
+  &nav__logo__image {
+    width: 200px;
+  }
+  &__title{
+
+  }
+  &__item{
+      text-decoration: none;
+      margin-right: 0.5rem;
+    &:hover {
+    text-decoration: underline;
+  }
+  }
+}

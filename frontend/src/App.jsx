@@ -1,8 +1,9 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import './App.css'
-import { Home } from './pages/home'
-import { Signin } from './pages/signin'
-import { Dashboard } from './pages/dashboard'
+import './App.module.scss'
+import '../src/style/root.module.scss'
+import { Home } from './pages/home/home'
+import { Signin } from './pages/signin/signin'
+import { Dashboard } from './pages/dashboard/dashboard'
 
 
 function App() {
