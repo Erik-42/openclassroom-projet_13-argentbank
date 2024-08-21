@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from './homeLayout.module.scss'
 import HeroBanner from '../heroBanner/heroBanner'
 import Header from '../header/header'
@@ -7,10 +6,10 @@ import Features from '../features/features'
 
 export default function HomeLayout() {
   return (
-<div className="layoutWrapper">
-      <Header />
-      <HeroBanner />
+<div className={styled.homeLayout}>
+      <Header></Header>
+      <HeroBanner></HeroBanner>
       <Features></Features>
-      <Footer />
+      <Footer></Footer>
     </div>  )
 }

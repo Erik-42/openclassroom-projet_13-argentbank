@@ -1,0 +1,20 @@
+@use '../styles/variables';
+
+.featureItem {
+  flex: 1;
+  padding: 2.5rem;
+}
+
+.featureIcon {
+  width: 100px;
+  border: 10px solid variables.$color-primary;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.featureItemTitle {
+  color: variables.$color-text-dark;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
