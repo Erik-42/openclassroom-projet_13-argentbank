@@ -1,0 +1,36 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.errorTitle {
+  font-size: 6rem;
+  margin: 0;
+  color: #e63946;
+}
+
+.errorMessage {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.suggestion {
+  font-size: 1rem;
+
+  a {
+    color: #1d3557;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

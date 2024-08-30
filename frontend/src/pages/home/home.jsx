@@ -1,18 +1,13 @@
 import HeroBanner from '../../components/heroBanner/heroBanner'
-import Header from "../../components/header/header";
 import Features from "../../components/features/features";
-import Footer from "../../components/footer/footer";
-
+import styled from './home.module.scss'
 export  function Home() {
   
   return (
-       <>
-      <Header />
-      <main>
+
+      <main className={styled.homeLayout}>
         <HeroBanner />
         <Features />
       </main>
-      <Footer />
-    </>
   );
 }

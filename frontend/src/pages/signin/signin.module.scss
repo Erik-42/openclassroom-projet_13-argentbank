@@ -1,0 +1,16 @@
+.bg__signin {
+  background-color: #12002b;
+  width: 100%;
+  min-height: calc(95vh - var(--header-height) - var(--footer-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+// Assurez-vous de définir ces variables CSS quelque part dans votre projet
+:root {
+  --header-height: 60px;  // Exemple : hauteur du header
+  --footer-height: 60px;  // Exemple : hauteur du footer
+}

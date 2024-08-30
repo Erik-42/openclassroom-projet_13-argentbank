@@ -1,15 +1,10 @@
-import Footer from "../../components/footer/footer";
-import Header from "../../components/header/header";
-import Login from "../../components/login/login";
+import LoginForm from "../../components/loginForm/loginForm";
+import styled from './signin.module.scss'
 
 export  function Signin() {
   return (
-       <>
-      <Header />
-      <main>
-        <Login />
+      <main className={styled.bg__signin}>
+        <LoginForm />
       </main>
-      <Footer />
-    </>
   );
 }
