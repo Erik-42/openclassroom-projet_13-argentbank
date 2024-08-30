@@ -1,4 +1,30 @@
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux";
+import { setUser } from "../../slice/userSlice";
+
 export  function Dashboard() {
+    const token = useSelector((state) => state.token.token); //Selectionne le token
+    const dispatch = useDispatch()
+    const firstname =useSelector((state) => state.user.firstname)
+    const lastname =useSelector((state) => state.user.lastname)
+
+  useEffect(()=>{
+fetch ("http://localhost:3001/api/v1/user/profile",{
+  headers: {
+    'content-type': 'application/json',
+    Authorization: 'Bearer '+ token
+  },
+  method:'POST',
+  body: JSON.stringify({})
+}
+)
+.then (response => response.json())
+.then (data => {
+  console.log(data.body)
+  dispatch(setUser({firstname: data.body.firstName, lastname: data.body.lastName}))
+})
+  },[])
+
   return (
     <div>
       <nav className="main-nav">
@@ -23,8 +49,8 @@ export  function Dashboard() {
     </nav>
     <main className="main bg-dark">
       <div className="header">
-        <h1>Welcome back<br />Tony Jarvis!</h1>
-        <button className="edit-button">Edit Name</button>
+        <h1>Welcome back<br />{firstname} {lastname}!</h1>
+        <button className="editButton">Edit Name</button>
       </div>
       <h2 className="sr-only">Accounts</h2>
       <section className="account">

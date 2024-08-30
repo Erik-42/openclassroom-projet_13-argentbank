@@ -1,21 +1,20 @@
-
 import { Link } from 'react-router-dom';
 import styled from './Header.module.scss';
 import logo from '../../assets/img/logo/argentBankLogo.png';
 import { useSelector, useDispatch } from 'react-redux';
-import { signOut } from '../../slice/signSlice';
+import { removeToken } from '../../slice/tokenSlice';
 
 export default function Header() {
-  const token = useSelector((state) => state.sign.token); //Selectionne le token
+  const token = useSelector((state) => state.token.token); //Selectionne le token
   const dispatch = useDispatch();
 
   const handleSignOut = () => {
-    dispatch(signOut());
+    dispatch(removeToken());
   };
 
   return (
     <header>
-      <nav className="nav">
+      <nav className={styled.nav}>
         <Link className={styled.nav__logo} to="/">
           <img
             className={styled.nav__logo__image}
@@ -35,7 +34,7 @@ export default function Header() {
             </button>
           </>
         ) : (
-          <Link className={styled.nav__item} to="/signin">
+          <Link className={styled.nav__item} to="/login">
             <i className="fa fa-user-circle"></i> Sign In
           </Link>
         )}
