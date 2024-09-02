@@ -1,70 +1,59 @@
-
 .account {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #000;
-  background-color: #fff;
-  width: 80%;
-  margin: 0 auto;
-  flex-direction: column;
-  padding: 1.5rem;
-  box-sizing: border-box;
-  text-align: left;
-  margin-bottom: 2rem;
-
-  @media (min-width: 720px) {
-    flex-direction: row;
-  }
-}
-
-.accountContentWrapper {
-  width: 100%;
-  flex: 1;
-}
-
-.accountTitle {
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-.accountAmount {
-  margin: 0;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.accountAmountDescription {
-  margin: 0;
-}
-
-.accountContentWrapper {
-  width: 100%;
-  flex: 1;
-
-  &.cta {
-    @media (min-width: 720px) {
-      flex: 0;
-    }
-  }
-}
-
-.transactionButton {
-  display: block;
-  width: 100%;
-  padding: 8px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-top: 1rem;
-  border-color: black;
-  background-color: white;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-
-  @media (min-width: 720px) {
-    width: 200px;
-  }
+	// background-color: #fff; /* White background for account sections */
+	color: #000;
+	width: 80%;
+	// padding: 1rem;
+	margin: 1rem 0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	gap: 2rem;
+	&__wrapper {
+		background-color: #fff;
+		width: 100%;
+		padding: 1rem;
+		&__title {
+			position: relative;
+			margin: 1rem 1rem 0;
+			font-size: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			font-weight: 100;
+		}
+		&__container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin: 0 1rem;
+			&__amount {
+				font-size: 40px;
+				font-weight: 900;
+			}
+			&__cta {
+				&__transactionButton {
+					background-color: #00bc77; /* Bright green for transaction button */
+					color: #fff;
+					padding: 10px;
+					border: none;
+					cursor: pointer;
+					box-shadow: 3px 3px 0px rgb(95, 95, 95);
+					font-size: 20px;
+				}
+			}
+		}
+		&__description {
+			position: relative;
+			margin: 0 1rem 1rem;
+			font-size: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+		}
+	}
 }

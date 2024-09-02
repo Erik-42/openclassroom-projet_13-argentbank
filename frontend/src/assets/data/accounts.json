@@ -1,0 +1,23 @@
+{
+	"1": {
+		"id": "1",
+		"name": "Argent Bank Checking",
+		"serialNumber": "x8349",
+		"desc": "Available Balance",
+		"balance": "2,082.79"
+	},
+	"2": {
+		"id": "2",
+		"name": "Argent Bank Savings",
+		"serialNumber": "x6712",
+		"desc": "Available Balance",
+		"balance": "10,928.42"
+	},
+	"3": {
+		"id": "3",
+		"name": "Argent Bank Credit Card",
+		"serialNumber": "x6894",
+		"desc": "Current Balance",
+		"balance": "184.30"
+	}
+}

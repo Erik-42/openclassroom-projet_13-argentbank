@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import style from './account.module.scss';
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import styled from "./account.module.scss";
 
 /**
  * Component displaying an account's balance preview.
@@ -13,27 +13,98 @@ import style from './account.module.scss';
  *  <AccountBalance title={title} amount={amount} desc={desc} />
  * )
  */
-function AccountBalance({ title, serial, amount, desc, id }) {
-  return (
-    <section className={style.account}>
-      <div className={style.accountContentWrapper}>
-        <h3 className={style.accountTitle}>{title} ({serial})</h3>
-        <p className={style.accountAmount}>&#36;{amount}</p>
-        <p className={style.accountAmountDescription}>{desc}</p>
-      </div>
-      <div className={`${style.accountContentWrapper} ${style.cta}`}>
-        <Link to={`/account/${id}`} className={style.transactionButton}>View transactions</Link>
-      </div>
-    </section>
-  );
+export default function Account({ title, serial, amount, desc, id }) {
+	return (
+		// <section className={style.account}>
+		// 	<div className={style.account__Wrapper}>
+		// 		<h3 className={style.accountTitle}>
+		// 			{title} ({serial})
+		// 		</h3>
+		// 		<p className={style.account__amount}>&#36;{amount}</p>
+		// 		<p className={style.account__amount__description}>{desc}</p>
+		// 	</div>
+		// 	<div className={`${style.account__Wrapper} ${style.cta}`}>
+		// 		<Link
+		// 			to={`/account/${id}`}
+		// 			className={style.account__Wrapper__transactionButton}
+		// 		>
+		// 			View transactions
+		// 		</Link>
+		// 	</div>
+		// </section>
+		<section className={styled.account}>
+			<article className={styled.account__wrapper}>
+				<h3 className={styled.account__wrapper__title}>
+					Argent Bank Checking (x8349)
+				</h3>
+				<div className={styled.account__wrapper__container}>
+					<p className={styled.account__wrapper__container__amount}>
+						$2,082.79
+					</p>
+					<div className={styled.account__wrapper__container__cta}>
+						<button
+							className={
+								styled.account__wrapper__container__cta__transactionButton
+							}
+						>
+							View transactions
+						</button>
+					</div>
+				</div>
+				<p className={styled.account__wrapper__description}>
+					Available Balance
+				</p>
+			</article>
+
+			<article className={styled.account__wrapper}>
+				<h3 className={styled.account__wrapper__title}>
+					Argent Bank Savings (x6712)
+				</h3>
+				<div className={styled.account__wrapper__container}>
+					<p className={styled.account__wrapper__container__amount}>
+						$10,928.42
+					</p>
+					<div className={styled.account__wrapper__container__cta}>
+						<button
+							className={
+								styled.account__wrapper__container__cta__transactionButton
+							}
+						>
+							View transactions
+						</button>
+					</div>
+				</div>
+				<p className={styled.account__wrapper__description}>
+					Available Balance
+				</p>
+			</article>
+
+			<article className={styled.account__wrapper}>
+				<h3 className={styled.account__wrapper__title}>
+					Argent Bank Credit Card (x8349)
+				</h3>
+				<div className={styled.account__wrapper__container}>
+					<p className={styled.account__wrapper__container__amount}>$184.30</p>
+					<div className={styled.account__wrapper__container__cta}>
+						<button
+							className={
+								styled.account__wrapper__container__cta__transactionButton
+							}
+						>
+							View transactions
+						</button>
+					</div>
+				</div>
+				<p className={styled.account__wrapper__description}>Current Balance</p>
+			</article>
+		</section>
+	);
 }
 
-AccountBalance.propTypes = {
-  title: PropTypes.string.isRequired,
-  serial: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+Account.propTypes = {
+	title: PropTypes.string.isRequired,
+	serial: PropTypes.string.isRequired,
+	amount: PropTypes.string.isRequired,
+	desc: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
 };
-
-export default AccountBalance;

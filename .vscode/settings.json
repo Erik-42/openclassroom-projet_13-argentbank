@@ -1,11 +1,27 @@
 {
-    "editor.defaultFormatter": "svipas.prettier-plus",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "eslint.format.enable": true,
-    "cSpell.autoFormatConfigFile": true,
-    "notebook.defaultFormatter": "svipas.prettier-plus",
-    "notebook.formatOnSave.enabled": true,
-    "notebook.formatOnCellExecution": true,
-    "files.autoSave": "onFocusChange"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "cSpell.autoFormatConfigFile": true,
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.formatOnSave.enabled": true,
+  "notebook.formatOnCellExecution": true,
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnType": true,
+  "html.format.unformatted": "",
+  "html.format.enable": true,
+  "html.format.indentHandlebars": true,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": null,
+      "savePathReplacementPairs": null
+    }
+  ],
+  "html.format.contentUnformatted": "",
+  "html.format.templating": true,
+  "editor.indentSize": "tabSize",
+  "prettier.useTabs": true
 }
