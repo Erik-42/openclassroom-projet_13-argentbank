@@ -46,11 +46,11 @@ export default function EditName({ isOpen, onClose }) {
 	if (!isOpen) return null;
 
 	return (
-		<div className={styled.modalOverlay}>
-			<div className={styled.modal}>
-				<h2>Edit Name</h2>
+		<div className={styled.modal}>
+			<div className={styled.modal__container}>
+				<h2 className={styled.modal__container__title}>Edit Name</h2>
 				<form>
-					<div className={styled.inputGroup}>
+					<div className={styled.modal__container__input}>
 						<label htmlFor="firstname">First Name</label>
 						<input
 							id="firstname"
@@ -59,7 +59,7 @@ export default function EditName({ isOpen, onClose }) {
 							onChange={(e) => setNewFirstname(e.target.value)}
 						/>
 					</div>
-					<div className={styled.inputGroup}>
+					<div className={styled.modal__container__input}>
 						<label htmlFor="lastname">Last Name</label>
 						<input
 							id="lastname"
@@ -68,18 +68,18 @@ export default function EditName({ isOpen, onClose }) {
 							onChange={(e) => setNewLastname(e.target.value)}
 						/>
 					</div>
-					<div className={styled.buttonGroup}>
+					<div className={styled.modal__container__button}>
 						<button
 							type="button"
 							onClick={handleSave}
-							className={styled.saveButton}
+							className={styled.modal__container__button__saveButton}
 						>
 							Save
 						</button>
 						<button
 							type="button"
 							onClick={onClose}
-							className={styled.cancelButton}
+							className={styled.modal__container__button__cancelButton}
 						>
 							Cancel
 						</button>
