@@ -1,4 +1,4 @@
-import styled from "./loginForm.module.scss";
+import styles from "./signinForm.module.scss";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setToken } from "../../slice/tokenSlice";
@@ -12,11 +12,11 @@ export default function LoginForm() {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
-	// Charge le token depuis localStorage au démarrage si présent
+	// Charge le token depuis le localStorage
 	useEffect(() => {
-		const storeToken = localStorage.getItem("token");
-		if (storeToken) {
-			dispatch(setToken(storeToken));
+		const storedToken = localStorage.getItem("token");
+		if (storedToken) {
+			dispatch(setToken(storedToken));
 			navigate("/dashboard");
 		}
 	}, [dispatch, navigate]);
@@ -32,11 +32,15 @@ export default function LoginForm() {
 				password: password,
 			}),
 		})
-			.then((response) => response.json())
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error("Network response was not ok");
+				}
+				return response.json();
+			})
 			.then((data) => {
 				if (data.body && data.body.token) {
 					dispatch(setToken(data.body.token));
-
 					if (rememberMe) {
 						localStorage.setItem("token", data.body.token);
 					}
@@ -51,16 +55,16 @@ export default function LoginForm() {
 	};
 
 	return (
-		<section className={styled.signIn}>
-			<i className={`fa fa-user-circle ${styled.signIn__icon}`}></i>
+		<section className={styles.login}>
+			<i className={`fa fa-user-circle ${styles.login__icon}`}></i>
 			<h1>Sign In</h1>
 
 			{errorMessage && (
-				<div className={styled.signIn__errorMessage}>{errorMessage}</div>
+				<div className={styles.login__errorMessage}>{errorMessage}</div>
 			)}
 
-			<form className={styled.signIn__form} onSubmit={handleSubmit}>
-				<div className={styled.signIn__form__wrapper}>
+			<form className={styles.login__form} onSubmit={handleSubmit}>
+				<div className={styles.login__form__wrapper}>
 					<label htmlFor="email">Email</label>
 					<input
 						id="email"
@@ -71,7 +75,7 @@ export default function LoginForm() {
 						onChange={(e) => setLogin(e.target.value)}
 					/>
 				</div>
-				<div className={styled.signIn__form__wrapper}>
+				<div className={styles.login__form__wrapper}>
 					<label htmlFor="password">Password</label>
 					<input
 						id="password"
@@ -82,7 +86,7 @@ export default function LoginForm() {
 						onChange={(e) => setPassword(e.target.value)}
 					/>
 				</div>
-				<div className={styled.signIn__form__remember}>
+				<div className={styles.login__form__remember}>
 					<input
 						id="rememberMe"
 						type="checkbox"
@@ -93,7 +97,7 @@ export default function LoginForm() {
 					<label htmlFor="rememberMe">Remember me</label>
 				</div>
 
-				<button type="submit" className={styled.signIn__button}>
+				<button type="submit" className={styles.login__button}>
 					Sign In
 				</button>
 			</form>

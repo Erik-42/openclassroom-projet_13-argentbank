@@ -2,38 +2,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  font-family: var(--font-default);
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	font-family: var(--font-default);
 }
 
 :root {
-  --font-default: "Roboto", Arial, Helvetica, sans-serif;
-  --font-filter: "Manrope", Arial, Helvetica, sans-serif;
+	--font-default: "Roboto", Arial, Helvetica, sans-serif;
+	--font-filter: "Manrope", Arial, Helvetica, sans-serif;
 
-  --primaryBgColor: white;
-  --primaryFontColor: black;
-  --secondaryBgColor: #00bc77;
-  --secondaryFontColor: #2c3e50;
-  --tertiaryBgColor: #12002b;
-  --tertiaryFontColor: #222;
-  --menuBgColor: #000;
-  --signinBgColor: #12002b;
+	--primaryBgColor: white;
+	--primaryFontColor: black;
+	--secondaryBgColor: #00bc77;
+	--secondaryFontColor: #2c3e50;
+	--tertiaryBgColor: #12002b;
+	--tertiaryFontColor: #222;
+	--menuBgColor: #000;
+	--signinBgColor: #12002b;
+
+	--header-height: 60px;
+	--footer-height: 60px;
 }
 
 .roboto-regular {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 .manrope {
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+	font-family: "Manrope", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
 }
 
 // body {

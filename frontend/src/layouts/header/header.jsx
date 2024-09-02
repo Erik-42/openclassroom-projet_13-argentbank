@@ -11,6 +11,8 @@ export default function Header() {
 	const navigate = useNavigate();
 
 	const handleSignOut = () => {
+		// localStorage.clear();
+
 		dispatch(removeToken());
 		navigate("/"); // Redirige vers la page d'accueil après la déconnexion
 	};
