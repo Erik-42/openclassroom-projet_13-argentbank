@@ -31,9 +31,17 @@
 			flex-direction: row;
 			justify-content: space-between;
 			margin: 0 1rem;
+			@media (max-width: 600px) {
+				flex-direction: column;
+				align-items: flex-start; /* Alignement des éléments sur le côté gauche */
+				gap: 1rem; /* Ajout d'un espacement entre les éléments */
+			}
 			&__amount {
 				font-size: 40px;
 				font-weight: 900;
+				@media (max-width: 330px) {
+					font-size: 30px;
+				}
 			}
 			&__cta {
 				&__transactionButton {
@@ -49,7 +57,7 @@
 		}
 		&__description {
 			position: relative;
-			margin: 0 1rem 1rem;
+			margin: 1rem;
 			font-size: 20px;
 			display: flex;
 			align-items: center;
