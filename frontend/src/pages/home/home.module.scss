@@ -1,48 +1,8 @@
-.nav{
-  &__logo{
-    &__image{
-
-    }
-  }
-  &__title{
-
-  }
-  &__item{
-
-  }
-}
-.hero{
-  &__banner{
-    &__slogan{
-
-    }
-    &__subtitle{
-
-    }
-    &__text{
-
-    }
-  }
-}
 .features {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  @media (min-width: 920px) {
-    flex-direction: row;
-  }
-  &__item{
-
-    &__icon{
-      
-    }
-    &__title{
-
-    }
-  }
-}
-footer{
-  &__text{
-    
-  }
+	@media (min-width: 920px) {
+		flex-direction: row;
+	}
 }

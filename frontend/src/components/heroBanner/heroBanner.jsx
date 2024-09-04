@@ -1,4 +1,4 @@
-import bannerImage from "../../assets/img/bank-tree.jpeg";
+import bannerImage from "../../assets/img/banner/bank-tree.jpeg";
 import styled from "./heroBanner.module.scss";
 
 export default function HeroBanner() {

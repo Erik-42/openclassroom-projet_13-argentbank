@@ -11,7 +11,7 @@
 	z-index: 1000;
 
 	&__container {
-		background-color: #fff;
+		background-color: var(--defaultBgColor);
 		padding: 2rem;
 		border-radius: 5px;
 		max-width: 500px;
@@ -19,14 +19,14 @@
 		text-align: center;
 
 		&__title {
-			color: black;
+			color: var(--defaultFontColor);
 			margin: 1rem;
 		}
 
 		&__input {
 			margin-bottom: 1rem;
 			label {
-				color: black;
+				color: var(--defaultFontColor);
 				text-align: start;
 			}
 			input {
@@ -43,8 +43,8 @@
 			justify-content: space-between;
 
 			&__saveButton {
-				background-color: #00bc77;
-				color: #fff;
+				background-color: var(--secondaryBgColor);
+				color: var(--primaryFontColor);
 				padding: 0.5rem 1rem;
 				border: none;
 				cursor: pointer;
@@ -54,7 +54,7 @@
 
 			&__cancelButton {
 				background-color: #ccc;
-				color: #000;
+				color: var(--defaultFontColor);
 				padding: 0.5rem 1rem;
 				border: none;
 				cursor: pointer;

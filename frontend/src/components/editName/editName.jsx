@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../slice/userSlice";
 import styled from "./editName.module.scss";
-import PropTypes from "prop-types"; // Import de PropTypes
+import PropTypes from "prop-types";
 
 // Définition des PropTypes pour le composant
 EditName.propTypes = {

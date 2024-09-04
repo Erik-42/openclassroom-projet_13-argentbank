@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import styled from "./account.module.scss";
 
 /**
@@ -13,25 +11,9 @@ import styled from "./account.module.scss";
  *  <AccountBalance title={title} amount={amount} desc={desc} />
  * )
  */
-export default function Account({ title, serial, amount, desc, id }) {
+
+export default function Account() {
 	return (
-		// <section className={style.account}>
-		// 	<div className={style.account__Wrapper}>
-		// 		<h3 className={style.accountTitle}>
-		// 			{title} ({serial})
-		// 		</h3>
-		// 		<p className={style.account__amount}>&#36;{amount}</p>
-		// 		<p className={style.account__amount__description}>{desc}</p>
-		// 	</div>
-		// 	<div className={`${style.account__Wrapper} ${style.cta}`}>
-		// 		<Link
-		// 			to={`/account/${id}`}
-		// 			className={style.account__Wrapper__transactionButton}
-		// 		>
-		// 			View transactions
-		// 		</Link>
-		// 	</div>
-		// </section>
 		<section className={styled.account}>
 			<article className={styled.account__wrapper}>
 				<h3 className={styled.account__wrapper__title}>
@@ -100,11 +82,3 @@ export default function Account({ title, serial, amount, desc, id }) {
 		</section>
 	);
 }
-
-Account.propTypes = {
-	title: PropTypes.string.isRequired,
-	serial: PropTypes.string.isRequired,
-	amount: PropTypes.string.isRequired,
-	desc: PropTypes.string.isRequired,
-	id: PropTypes.string.isRequired,
-};

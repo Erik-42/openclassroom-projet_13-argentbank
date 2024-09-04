@@ -1,8 +1,6 @@
 .account {
-	// background-color: #fff; /* White background for account sections */
-	color: #000;
+	color: var(--defaultFontColor);
 	width: 80%;
-	// padding: 1rem;
 	margin: 1rem 0;
 	text-align: center;
 	display: flex;
@@ -11,7 +9,7 @@
 	flex-direction: column;
 	gap: 2rem;
 	&__wrapper {
-		background-color: #fff;
+		background-color: var(--defaultBgColor);
 		width: 100%;
 		padding: 1rem;
 		&__title {
@@ -33,8 +31,8 @@
 			margin: 0 1rem;
 			@media (max-width: 600px) {
 				flex-direction: column;
-				align-items: flex-start; /* Alignement des éléments sur le côté gauche */
-				gap: 1rem; /* Ajout d'un espacement entre les éléments */
+				align-items: flex-start;
+				gap: 1rem;
 			}
 			&__amount {
 				font-size: 40px;
@@ -45,8 +43,8 @@
 			}
 			&__cta {
 				&__transactionButton {
-					background-color: #00bc77; /* Bright green for transaction button */
-					color: #fff;
+					background-color: var(--secondaryBgColor);
+					color: var(--primaryFontColor);
 					padding: 10px;
 					border: none;
 					cursor: pointer;

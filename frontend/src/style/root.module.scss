@@ -12,16 +12,26 @@
 
 :root {
 	--font-default: "Roboto", Arial, Helvetica, sans-serif;
-	--font-filter: "Manrope", Arial, Helvetica, sans-serif;
 
-	--primaryBgColor: white;
-	--primaryFontColor: black;
+	--defaultBgColor: #fff;
+	--defaultFontColor: #000;
+
+	--primaryBgColor: #12002b;
+	--primaryFontColor: #fff;
 	--secondaryBgColor: #00bc77;
 	--secondaryFontColor: #2c3e50;
 	--tertiaryBgColor: #12002b;
 	--tertiaryFontColor: #222;
 	--menuBgColor: #000;
 	--signinBgColor: #12002b;
+	--circleFeature: green;
+	--errorMessage: red;
+	--hoverbutton: darkgreen;
+	--borderLineColor: #dddddd;
+
+	--404BgColor: #f4f4f4;
+	--404FontColor: #333;
+	--404Link: #1d3557;
 
 	--header-height: 60px;
 	--footer-height: 60px;
@@ -32,13 +42,3 @@
 	font-weight: 400;
 	font-style: normal;
 }
-.manrope {
-	font-family: "Manrope", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-}
-
-// body {
-//   background-color: var(--primaryBgColor);
-// }

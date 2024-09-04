@@ -1,6 +1,6 @@
 .dashboard {
-	background-color: #12002b;
-	color: #fff;
+	background-color: var(--signinBgColor);
+	color: var(--primaryFontColor);
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
@@ -13,12 +13,10 @@
 		margin-bottom: 2rem;
 		width: 100%;
 		margin: 6rem 0 1rem;
-		&__name {
-		}
 		&__editButton {
 			border: none;
-			background-color: #00bc77;
-			color: #fff;
+			background-color: var(--secondaryBgColor);
+			color: var(--primaryFontColor);
 			font-weight: bold;
 			padding: 1rem;
 			min-width: 100px;

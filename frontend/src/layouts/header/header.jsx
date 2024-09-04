@@ -14,7 +14,7 @@ export default function Header() {
 		// localStorage.clear();
 
 		dispatch(removeToken());
-		navigate("/"); // Redirige vers la page d'accueil après la déconnexion
+		navigate("/");
 	};
 
 	return (

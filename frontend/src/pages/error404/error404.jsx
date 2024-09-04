@@ -1,5 +1,5 @@
 import styled from "./error404.module.scss";
-import error404 from "../../assets/img/error404.png";
+import error404 from "../../assets/img/error404/error404.png";
 
 export default function Error404() {
 	return (

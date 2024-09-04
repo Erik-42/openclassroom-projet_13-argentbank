@@ -1,13 +1,8 @@
-$color-primary: #00bc77;
-$color-secondary: #12002b;
-$color-text: #2c3e50;
-$color-text-dark: #222;
-
 header {
 	position: fixed;
-	background-color: white;
+	background-color: var(--defaultBgColor);
 	width: 100%;
-	border-bottom: 2px solid #dddddd;
+	border-bottom: 2px solid var(--borderLineColor);
 	z-index: 1;
 }
 .nav {
@@ -35,7 +30,7 @@ header {
 		&__item {
 			font-size: 22px;
 			text-decoration: none;
-			color: black;
+			color: var(--defaultFontColor);
 			border: transparent;
 			background: transparent;
 			display: flex;
@@ -49,8 +44,4 @@ header {
 			}
 		}
 	}
-}
-
-.firstname {
-	// color: #12002b;
 }
