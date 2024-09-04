@@ -7,7 +7,7 @@ import Header from "./layouts/header/header";
 import Footer from "./layouts/footer/footer";
 import Error404 from "./pages/error404/error404";
 import ConnectedRoute from "./components/connectedRoutes/connectedRoute";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
 	return (

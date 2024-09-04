@@ -210,7 +210,7 @@ mesen.erik@gmail.com
 [wakatime-url]: https://wakatime.com/@f84d00d8-fee3-4ca3-803d-3daa3c7053a5
 [github badge-shield]: https://img.shields.io/badge/Github-Erik--42-155?style=for-the-badge&logo=github
 [github badge-url]: https://github.com/Erik-42
-[github repo-shield]: https://img.shields.io/badge/Repositories-42-blue
+[github repo-shield]: https://img.shields.io/badge/Repositories-48-blue
 [github repo-url]: https://github.com/Erik-42/Erik-42?tab=repositories
 [github repo file count (file type)-shield]: https://img.shields.io/github/directory-file-count/Erik-42/openclassroom-projet_13-argentbank
 [github repo file count (file type)-url]: https://github.com/directory-file-count/Erik-42/openclassroom-projet_13-argentbank
