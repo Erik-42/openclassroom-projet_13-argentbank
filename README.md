@@ -106,9 +106,12 @@ Exporter votre fichier en YAML<br>
 
 ## Installation:
 
-<a href=https://nodejs.org>NodeJS</a> & <a href=https://npmjs.com>Npm</a>
-<br>
-<a href=https://www.mongodb.com/try/download/community-edition/releases>MongoDB Community</a> & <a href=https://github.com/coreybutler/nvm-windows>NVM</a>
+<div>
+<a href=https://nodejs.org>NodeJS</a> & <a href=https://github.com/coreybutler/nvm-windows>NVM</a>
+</div>
+<div>
+<a href=https://www.mongodb.com/try/download/community-edition/releases>MongoDB Community</a> & <a href=https://npmjs.com>Npm</a>
+</div>
 
 ### Backend Dependencies:
 
@@ -165,9 +168,9 @@ Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-Github: [https://erik-42.github.io/openclassroom-projet_13-argentbank/](https://erik-42.github.io/openclassroom-projet_13-argentbank/)
-
 ## Testez le projet
+
+Github: [https://erik-42.github.io/openclassroom-projet_13-argentbank/](https://erik-42.github.io/openclassroom-projet_13-argentbank/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
