@@ -1,0 +1,3 @@
+apis:
+  backend/swagger.yaml:
+    alias: bank-argent-api-documentation

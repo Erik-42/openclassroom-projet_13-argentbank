@@ -1,0 +1,590 @@
+{
+    "version": "2.0.0",
+    "runtimeConfiguration": {
+        "environment": "default",
+        "laxTestingModeEnabled": false,
+        "logLevel": "error",
+        "logDestination": "stdout+platform",
+        "logMaxFileSize": 2147483648,
+        "requestHeaderNameRequestId": "x-scan-request-id",
+        "requestHeaderNameScenarioId": "x-scan-scenario-id",
+        "requestFlowrate": 100,
+        "requestTimeout": 30,
+        "requestTlsInsecureSkipVerify": true,
+        "responseFollowRedirection": false,
+        "responseMaxBodySizeScan": 10485760,
+        "happyPathOnly": false,
+        "maxScanDuration": 3600,
+        "memoryLimit": 2147483648,
+        "memoryTimeSpan": 10,
+        "reportMaxHttpResponseSizeHappyPath": 8092,
+        "reportMaxBodySizeHappyPath": 8092,
+        "reportMaxHttpResponseSizeTest": 8092,
+        "reportMaxBodySizeTest": 8092,
+        "reportIssuesOnly": false,
+        "reportMaxIssues": 1000,
+        "reportMaxSize": 20971520,
+        "reportGenerateCurlCommand": true
+    },
+    "customizations": {
+        "happyPaths": {
+            "retry": 1,
+            "responsePolicy": {
+                "httpStatusExpected": true,
+                "mustBeConformant": true
+            },
+            "httpStatusExpected": [
+                "2XX",
+                "400",
+                "404"
+            ]
+        },
+        "tests": {
+            "responsePolicy": {
+                "httpStatusExpected": true,
+                "mustBeConformant": true
+            }
+        }
+    },
+    "authenticationDetails": [
+        {
+            "Bearer": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "Authorization",
+                "default": "Bearer",
+                "credentials": {
+                    "Bearer": {
+                        "description": "Bearer security",
+                        "credential": "{{Bearer}}"
+                    }
+                }
+            }
+        }
+    ],
+    "operations": {
+        "/user/login:post": {
+            "operationId": "/user/login:post",
+            "scenarios": [
+                {
+                    "key": "happy.path",
+                    "fuzzing": true,
+                    "requests": [
+                        {
+                            "$ref": "#/operations/~1user~1login:post/request",
+                            "fuzzing": true
+                        }
+                    ]
+                }
+            ],
+            "request": {
+                "operationId": "/user/login:post",
+                "request": {
+                    "type": "42c",
+                    "details": {
+                        "url": "{{host}}/user/login",
+                        "method": "POST",
+                        "headers": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "requestBody": {
+                            "mode": "json",
+                            "json": {}
+                        }
+                    }
+                },
+                "defaultResponse": "200",
+                "responses": {
+                    "200": {
+                        "expectations": {
+                            "httpStatus": 200
+                        }
+                    },
+                    "400": {
+                        "expectations": {
+                            "httpStatus": 400
+                        }
+                    },
+                    "500": {
+                        "expectations": {
+                            "httpStatus": 500
+                        }
+                    }
+                }
+            }
+        },
+        "/user/profile:post": {
+            "operationId": "/user/profile:post",
+            "scenarios": [
+                {
+                    "key": "happy.path",
+                    "fuzzing": true,
+                    "requests": [
+                        {
+                            "$ref": "#/operations/~1user~1profile:post/request",
+                            "fuzzing": true
+                        }
+                    ]
+                }
+            ],
+            "request": {
+                "operationId": "/user/profile:post",
+                "auth": [
+                    "Bearer"
+                ],
+                "request": {
+                    "type": "42c",
+                    "details": {
+                        "url": "{{host}}/user/profile",
+                        "method": "POST"
+                    }
+                },
+                "defaultResponse": "200",
+                "responses": {
+                    "200": {
+                        "expectations": {
+                            "httpStatus": 200
+                        }
+                    },
+                    "400": {
+                        "expectations": {
+                            "httpStatus": 400
+                        }
+                    },
+                    "500": {
+                        "expectations": {
+                            "httpStatus": 500
+                        }
+                    }
+                }
+            }
+        },
+        "/user/profile:put": {
+            "operationId": "/user/profile:put",
+            "scenarios": [
+                {
+                    "key": "happy.path",
+                    "fuzzing": true,
+                    "requests": [
+                        {
+                            "$ref": "#/operations/~1user~1profile:put/request",
+                            "fuzzing": true
+                        }
+                    ]
+                }
+            ],
+            "request": {
+                "operationId": "/user/profile:put",
+                "auth": [
+                    "Bearer"
+                ],
+                "request": {
+                    "type": "42c",
+                    "details": {
+                        "url": "{{host}}/user/profile",
+                        "method": "PUT",
+                        "headers": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "requestBody": {
+                            "mode": "json",
+                            "json": {}
+                        }
+                    }
+                },
+                "defaultResponse": "200",
+                "responses": {
+                    "200": {
+                        "expectations": {
+                            "httpStatus": 200
+                        }
+                    },
+                    "400": {
+                        "expectations": {
+                            "httpStatus": 400
+                        }
+                    },
+                    "500": {
+                        "expectations": {
+                            "httpStatus": 500
+                        }
+                    }
+                }
+            }
+        },
+        "/user/signup:post": {
+            "operationId": "/user/signup:post",
+            "scenarios": [
+                {
+                    "key": "happy.path",
+                    "fuzzing": true,
+                    "requests": [
+                        {
+                            "$ref": "#/operations/~1user~1signup:post/request",
+                            "fuzzing": true
+                        }
+                    ]
+                }
+            ],
+            "request": {
+                "operationId": "/user/signup:post",
+                "request": {
+                    "type": "42c",
+                    "details": {
+                        "url": "{{host}}/user/signup",
+                        "method": "POST",
+                        "headers": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "requestBody": {
+                            "mode": "json",
+                            "json": {}
+                        }
+                    }
+                },
+                "defaultResponse": "200",
+                "responses": {
+                    "200": {
+                        "expectations": {
+                            "httpStatus": 200
+                        }
+                    },
+                    "400": {
+                        "expectations": {
+                            "httpStatus": 400
+                        }
+                    },
+                    "500": {
+                        "expectations": {
+                            "httpStatus": 500
+                        }
+                    }
+                }
+            }
+        },
+        "/user/transaction/{transactionId}:delete": {
+            "operationId": "/user/transaction/{transactionId}:delete",
+            "scenarios": [
+                {
+                    "key": "happy.path",
+                    "fuzzing": true,
+                    "requests": [
+                        {
+                            "$ref": "#/operations/~1user~1transaction~1{transactionId}:delete/request",
+                            "fuzzing": true
+                        }
+                    ]
+                }
+            ],
+            "request": {
+                "operationId": "/user/transaction/{transactionId}:delete",
+                "auth": [
+                    "Bearer"
+                ],
+                "request": {
+                    "type": "42c",
+                    "details": {
+                        "url": "{{host}}/user/transaction/{transactionId}",
+                        "method": "DELETE",
+                        "paths": [
+                            {
+                                "key": "transactionId",
+                                "value": "ktknjyvqxrmohdewgcaoelsebvjhkvny"
+                            }
+                        ]
+                    }
+                },
+                "defaultResponse": "200",
+                "responses": {
+                    "200": {
+                        "expectations": {
+                            "httpStatus": 200
+                        }
+                    },
+                    "401": {
+                        "expectations": {
+                            "httpStatus": 401
+                        }
+                    },
+                    "404": {
+                        "expectations": {
+                            "httpStatus": 404
+                        }
+                    },
+                    "500": {
+                        "expectations": {
+                            "httpStatus": 500
+                        }
+                    }
+                }
+            }
+        },
+        "/user/transaction/{transactionId}:get": {
+            "operationId": "/user/transaction/{transactionId}:get",
+            "scenarios": [
+                {
+                    "key": "happy.path",
+                    "fuzzing": true,
+                    "requests": [
+                        {
+                            "$ref": "#/operations/~1user~1transaction~1{transactionId}:get/request",
+                            "fuzzing": true
+                        }
+                    ]
+                }
+            ],
+            "request": {
+                "operationId": "/user/transaction/{transactionId}:get",
+                "auth": [
+                    "Bearer"
+                ],
+                "request": {
+                    "type": "42c",
+                    "details": {
+                        "url": "{{host}}/user/transaction/{transactionId}",
+                        "method": "GET",
+                        "paths": [
+                            {
+                                "key": "transactionId",
+                                "value": "pqtvxkhebysudatidecumfwjlutxvgsx"
+                            }
+                        ]
+                    }
+                },
+                "defaultResponse": "200",
+                "responses": {
+                    "200": {
+                        "expectations": {
+                            "httpStatus": 200
+                        }
+                    },
+                    "401": {
+                        "expectations": {
+                            "httpStatus": 401
+                        }
+                    },
+                    "404": {
+                        "expectations": {
+                            "httpStatus": 404
+                        }
+                    },
+                    "500": {
+                        "expectations": {
+                            "httpStatus": 500
+                        }
+                    }
+                }
+            }
+        },
+        "/user/transaction/{transactionId}:put": {
+            "operationId": "/user/transaction/{transactionId}:put",
+            "scenarios": [
+                {
+                    "key": "happy.path",
+                    "fuzzing": true,
+                    "requests": [
+                        {
+                            "$ref": "#/operations/~1user~1transaction~1{transactionId}:put/request",
+                            "fuzzing": true
+                        }
+                    ]
+                }
+            ],
+            "request": {
+                "operationId": "/user/transaction/{transactionId}:put",
+                "auth": [
+                    "Bearer"
+                ],
+                "request": {
+                    "type": "42c",
+                    "details": {
+                        "url": "{{host}}/user/transaction/{transactionId}",
+                        "method": "PUT",
+                        "paths": [
+                            {
+                                "key": "transactionId",
+                                "value": "vtzmfnamdinkrifvzdldhhneclayeszd"
+                            }
+                        ],
+                        "headers": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "requestBody": {
+                            "mode": "json",
+                            "json": {}
+                        }
+                    }
+                },
+                "defaultResponse": "200",
+                "responses": {
+                    "200": {
+                        "expectations": {
+                            "httpStatus": 200
+                        }
+                    },
+                    "400": {
+                        "expectations": {
+                            "httpStatus": 400
+                        }
+                    },
+                    "401": {
+                        "expectations": {
+                            "httpStatus": 401
+                        }
+                    },
+                    "404": {
+                        "expectations": {
+                            "httpStatus": 404
+                        }
+                    },
+                    "500": {
+                        "expectations": {
+                            "httpStatus": 500
+                        }
+                    }
+                }
+            }
+        },
+        "/user/transaction:get": {
+            "operationId": "/user/transaction:get",
+            "scenarios": [
+                {
+                    "key": "happy.path",
+                    "fuzzing": true,
+                    "requests": [
+                        {
+                            "$ref": "#/operations/~1user~1transaction:get/request",
+                            "fuzzing": true
+                        }
+                    ]
+                }
+            ],
+            "request": {
+                "operationId": "/user/transaction:get",
+                "auth": [
+                    "Bearer"
+                ],
+                "request": {
+                    "type": "42c",
+                    "details": {
+                        "url": "{{host}}/user/transaction",
+                        "method": "GET"
+                    }
+                },
+                "defaultResponse": "200",
+                "responses": {
+                    "200": {
+                        "expectations": {
+                            "httpStatus": 200
+                        }
+                    },
+                    "401": {
+                        "expectations": {
+                            "httpStatus": 401
+                        }
+                    },
+                    "404": {
+                        "expectations": {
+                            "httpStatus": 404
+                        }
+                    },
+                    "500": {
+                        "expectations": {
+                            "httpStatus": 500
+                        }
+                    }
+                }
+            }
+        },
+        "/user/transaction:post": {
+            "operationId": "/user/transaction:post",
+            "scenarios": [
+                {
+                    "key": "happy.path",
+                    "fuzzing": true,
+                    "requests": [
+                        {
+                            "$ref": "#/operations/~1user~1transaction:post/request",
+                            "fuzzing": true
+                        }
+                    ]
+                }
+            ],
+            "request": {
+                "operationId": "/user/transaction:post",
+                "auth": [
+                    "Bearer"
+                ],
+                "request": {
+                    "type": "42c",
+                    "details": {
+                        "url": "{{host}}/user/transaction",
+                        "method": "POST",
+                        "headers": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "requestBody": {
+                            "mode": "json",
+                            "json": {}
+                        }
+                    }
+                },
+                "defaultResponse": "201",
+                "responses": {
+                    "201": {
+                        "expectations": {
+                            "httpStatus": 201
+                        }
+                    },
+                    "400": {
+                        "expectations": {
+                            "httpStatus": 400
+                        }
+                    },
+                    "401": {
+                        "expectations": {
+                            "httpStatus": 401
+                        }
+                    },
+                    "500": {
+                        "expectations": {
+                            "httpStatus": 500
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "environments": {
+        "default": {
+            "variables": {
+                "Bearer": {
+                    "from": "environment",
+                    "name": "SCAN42C_SECURITY_BEARER",
+                    "required": true
+                },
+                "host": {
+                    "from": "environment",
+                    "name": "SCAN42C_HOST",
+                    "required": false,
+                    "default": "http://localhost:3001/api/v1"
+                }
+            }
+        }
+    }
+}
