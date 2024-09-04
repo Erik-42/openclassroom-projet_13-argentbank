@@ -8,7 +8,7 @@
 <div align="center">
   <h1>ArgentBank</h1>
   <a href="https://github.com/Erik-42">
-    <img src="./frontend/assets/logos/logo argentbank.png" alt="Logo ArgentBank" width="300" height="70">
+    <img src="./frontend/src/assets/img/logo/argentBankLogo.png" alt="Logo ArgentBank" width="300" height="70">
   </a>
 </div>
 
@@ -35,6 +35,7 @@
 [![Issues][issues-shield]][issues-url]
 [![wakatime repo](https://wakatime.com/badge/github/Erik-42/openclassroom-projet_13-argentbank.svg)](https://wakatime.com/badge/github/Erik-42/openclassroom-projet_13-argentbank)
 [![wakatime](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/0b18637a-df2f-46f6-93e5-574433068892.svg)](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/0b18637a-df2f-46f6-93e5-574433068892)
+
 </div>
 Utilisez une API pour un compte utilisateur bancaire avec React
 <p></p>
@@ -42,27 +43,45 @@ Vous venez de commencer à travailler chez Remede Agency, une agence spécialis�
 
 L'équipe est principalement composée de développeurs back-end et vient de commencer à recruter d'autres spécialistes front-end.
 
+Le projet se décompose en deux phases :
+
+    Phase 1 : Authentification des utilisateurs - Création d'une application web permettant aux clients de se connecter et de gérer leurs comptes et leur profil.
+
+    Phase 2 : Transactions - Il s’agirait de spécifier les endpoints d’API nécessaires pour une éventuelle deuxième mission une fois que nous aurons terminé la première.
+
 <p></p>
 
-<a href=https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id0%3A1>Le lien Figma de la maquette.</a>
+<a href="./designs/index.html">Le lien vers la maquette.</a>
 
-<a href=https://www.notion.so/openclassrooms/Copy-of-Dev4U-projet-Learn-Home-6686aa4b5f44417881a4884c9af5669e>Le kanban avec les User Stories à intégrer pour ce projet.</a>
+Phase 1:
+Utiliser Redux pour gérer le state de l'ensemble de l'application.<br>
+Ce que doit faire l’application :
 
-Pour ce sprint, il faut que tu intègres les US de la partie TODO (le reste sera au sprint suivant).
+    -L'utilisateur peut visiter la page d'accueil
+    -L'utilisateur peut se connecter au système
+    -L'utilisateur peut se déconnecter du système
+    -L'utilisateur ne peut voir les informations relatives à son propre profil qu'après s'être connecté avec succès
+    -L'utilisateur peut modifier le profil et conserver les données dans la base de données.
 
-L’objectif est de refaire la page profil avec React.
+Phase 2 :
 
-Le projet intègre des graphiques sur l’activité sportive de l’utilisateur. Je t’invite à utiliser soit D3, soit Recharts.
+Les transactions qui doit pouvoir permettre aux utilisateurs :
 
-Le projet doit être lisible sur les écrans d’au moins 1024 par 780 pixels.
+    -de visualiser toutes leurs transactions pour le mois en cours, groupées par compte ;
+    -de visualiser les détails d'une transaction dans une autre vue ;
+    -d'ajouter, de modifier ou de supprimer des informations sur une transaction.
 
-Pour la gestion des calls en eux-mêmes, je t’invite à utiliser soit Fetch, soit Axios.
+Fournissez un document décrivant les API proposées pour les transactions, en suivant les directives de Swagger.
 
-Il faudra que tu commences le projet en réalisant un mock des données de l'API.
+Parmi les éléments clés à spécifier pour chaque endpoint de l’API il faudra :
 
-Attention, en fonction des utilisateurs, le schéma de données est légèrement différent.
+    -La méthode HTTP (ex. : GET, POST etc.)
+    -La route (ex. : /store/inventory)
+    -La description de ce à quoi correspond l’endpoint (ex. : Retour de l'inventaire des animaux de compagnie)
+    -Les paramètres possibles pour tenir compte des différents scénarios (ex. : itemId (facultatif) = ID de l'article spécifique à demander à la base de données d'inventaire).
+    -Les différentes réponses avec les codes de réponse correspondants qui ont un sens pour cet endpoint (ex. : 404 : réponse d'erreur d'article inconnu).
 
-penses à standardiser les données venant de l'API
+     (Fichier > Enregistrer sous YAML) en utilisant la syntaxe Swagger.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,6 +93,7 @@ penses à standardiser les données venant de l'API
 <a href= https://github.com/Erik-42?tab=repositories&q=&type=&language=sass&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/sass.svg'> </a>
 <a href=https://github.com/Erik-42?tab=repositories&q=&type=&language=javascript&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/javascript.svg'> </a>
 <a href=https://github.com/Erik-42?tab=repositories&q=&type=&language=reactjs&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/reactjs.svg'> </a>
+<a href=https://github.com/Erik-42?tab=repositories&q=&type=&language=redux&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/redux.svg'> </a>
 <a href= https://github.com/Erik-42?tab=repositories&q=&type=&language=github&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/github.svg'> </a>
 <a href= https://github.com/Erik-42?tab=repositories&q=&type=&language=figma&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/figma.svg'> </a>
 
@@ -81,24 +101,38 @@ penses à standardiser les données venant de l'API
 
 ## Installation:
 
-<a href=https://nodejs.org>NodeJS</a>  
- <a href=https://yarnpkg.com>Yarn</a>
+<a href=https://nodejs.org>NodeJS</a>
 
 <a href=https://npmjs.com>Npm</a>
 
-### Dependencies:
+### Backend Dependencies:
 
-    "axios": "^1.7.2",
+    "axios": "^1.3.1",
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^5.9.21",
+    "swagger-ui-express": "^4.1.4",
+    "yamljs": "^0.3.0"
+
+### Frontend Dependencies:
+
+    "@reduxjs/toolkit": "^2.2.7",
+    "axios": "^1.7.7",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.24.1",
-    "recharts": "^2.12.7"
+    "react-redux": "^9.1.2",
+    "react-router-dom": "^6.26.0",
+    "redux": "^5.0.1",
+    "sass": "^1.77.8"
 
-If you are working with several versions of NodeJS, we recommend you install <a href=https://github.com/nvm-sh/nvm>nvm.</a> This tool will allow you to easily manage your NodeJS versions.
-2.2 Launching the project
+## Launching the project
 
-Fork the repository
+Fork the repository<br>
 Clone it on your computer.
 
 ### Backend
@@ -135,13 +169,13 @@ MongoDB argentbank argentbankOc-2024
 api key uniQdi5348f6tFLxZrHMRzF5KiNkOpPp2YZSoyQz0hcfjk4y3bjv7ea3PplY8RVd
 curl --location --request POST 'https://eu-west-2.aws.data.mongodb-api.com/app/data-napsbyn/endpoint/data/v1/action/findOne' \
 --header 'Content-Type: application/json' \
---header 'Access-Control-Request-Headers: *' \
+--header 'Access-Control-Request-Headers: \*' \
 --header 'api-key: uniQdi5348f6tFLxZrHMRzF5KiNkOpPp2YZSoyQz0hcfjk4y3bjv7ea3PplY8RVd' \
 --data-raw '{
-    "collection":"<formationOC>",
-    "database":"<argentbank>",
-    "dataSource":"Cluster0",
-    "projection": {"_id": 1}
+"collection":"<formationOC>",
+"database":"<argentbank>",
+"dataSource":"Cluster0",
+"projection": {"\_id": 1}
 }'
 
 https://editor.swagger.io/
