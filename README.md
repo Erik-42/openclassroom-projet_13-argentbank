@@ -43,7 +43,11 @@ Vous venez de commencer à travailler chez Remede Agency, une agence spécialis�
 
 L'équipe est principalement composée de développeurs back-end et vient de commencer à recruter d'autres spécialistes front-end.
 
-Le projet se décompose en deux phases :
+<div align="center">
+<a href="./designs/index.html">Lien vers la maquette.</a>
+</div>
+
+#### Le projet se décompose en deux phases :
 
     Phase 1 : Authentification des utilisateurs - Création d'une application web permettant aux clients de se connecter et de gérer leurs comptes et leur profil.
 
@@ -51,9 +55,8 @@ Le projet se décompose en deux phases :
 
 <p></p>
 
-<a href="./designs/index.html">Le lien vers la maquette.</a>
+### Phase 1:<br>
 
-Phase 1:
 Utiliser Redux pour gérer le state de l'ensemble de l'application.<br>
 Ce que doit faire l’application :
 
@@ -63,9 +66,9 @@ Ce que doit faire l’application :
     -L'utilisateur ne peut voir les informations relatives à son propre profil qu'après s'être connecté avec succès
     -L'utilisateur peut modifier le profil et conserver les données dans la base de données.
 
-Phase 2 :
+### Phase 2 :<br>
 
-Les transactions qui doit pouvoir permettre aux utilisateurs :
+Les transactions permisent aux utilisateurs :
 
     -de visualiser toutes leurs transactions pour le mois en cours, groupées par compte ;
     -de visualiser les détails d'une transaction dans une autre vue ;
@@ -81,6 +84,9 @@ Parmi les éléments clés à spécifier pour chaque endpoint de l’API il faud
     -Les paramètres possibles pour tenir compte des différents scénarios (ex. : itemId (facultatif) = ID de l'article spécifique à demander à la base de données d'inventaire).
     -Les différentes réponses avec les codes de réponse correspondants qui ont un sens pour cet endpoint (ex. : 404 : réponse d'erreur d'article inconnu).
 
+Utilisez https://editor.swagger.io/ ou un équivalent<br>
+Exporter votre fichier en YAML<br>
+
      (Fichier > Enregistrer sous YAML) en utilisant la syntaxe Swagger.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -95,15 +101,14 @@ Parmi les éléments clés à spécifier pour chaque endpoint de l’API il faud
 <a href=https://github.com/Erik-42?tab=repositories&q=&type=&language=reactjs&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/reactjs.svg'> </a>
 <a href=https://github.com/Erik-42?tab=repositories&q=&type=&language=redux&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/redux.svg'> </a>
 <a href= https://github.com/Erik-42?tab=repositories&q=&type=&language=github&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/github.svg'> </a>
-<a href= https://github.com/Erik-42?tab=repositories&q=&type=&language=figma&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/figma.svg'> </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Installation:
 
-<a href=https://nodejs.org>NodeJS</a>
-
-<a href=https://npmjs.com>Npm</a>
+<a href=https://nodejs.org>NodeJS</a> & <a href=https://npmjs.com>Npm</a>
+<br>
+<a href=https://www.mongodb.com/try/download/community-edition/releases>MongoDB Community</a> & <a href=https://github.com/coreybutler/nvm-windows>NVM</a>
 
 ### Backend Dependencies:
 
@@ -143,13 +148,11 @@ Clone it on your computer.
 
 `npm install` command wil allow you to install the depencies.
 
-## Testez le projet
-
 ### Available Scripts
 
 In the project backend directory , you can run:
 
-`yarn start`
+`npm run dev:server`
 
 And
 In the project frontend directory , you can run:
@@ -164,21 +167,7 @@ You may also see any lint errors in the console.
 
 Github: [https://erik-42.github.io/openclassroom-projet_13-argentbank/](https://erik-42.github.io/openclassroom-projet_13-argentbank/)
 
-mongodb+srv://<argentbank>:<argentbankOc-2024>@cluster0.m486stl.mongodb.net/
-MongoDB argentbank argentbankOc-2024
-api key uniQdi5348f6tFLxZrHMRzF5KiNkOpPp2YZSoyQz0hcfjk4y3bjv7ea3PplY8RVd
-curl --location --request POST 'https://eu-west-2.aws.data.mongodb-api.com/app/data-napsbyn/endpoint/data/v1/action/findOne' \
---header 'Content-Type: application/json' \
---header 'Access-Control-Request-Headers: \*' \
---header 'api-key: uniQdi5348f6tFLxZrHMRzF5KiNkOpPp2YZSoyQz0hcfjk4y3bjv7ea3PplY8RVd' \
---data-raw '{
-"collection":"<formationOC>",
-"database":"<argentbank>",
-"dataSource":"Cluster0",
-"projection": {"\_id": 1}
-}'
-
-https://editor.swagger.io/
+## Testez le projet
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

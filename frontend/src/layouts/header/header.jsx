@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import styled from "./Header.module.scss";
+import styled from "./header.module.scss";
 import logo from "../../assets/img/logo/argentBankLogo.png";
 import { useSelector, useDispatch } from "react-redux";
 import { removeToken } from "../../slice/tokenSlice";
