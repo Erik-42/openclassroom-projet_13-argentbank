@@ -1,7 +1,7 @@
 import styled from "./features.module.scss";
-import chatIcon from "../../assets/img/icones/icon-chat.png";
-import moneyIcon from "../../assets/img/icones/icon-money.png";
-import securityIcon from "../../assets/img/icones/icon-security.png";
+import chatIcon from "../../assets/img/icones/icon-chat.webp";
+import moneyIcon from "../../assets/img/icones/icon-money.webp";
+import securityIcon from "../../assets/img/icones/icon-security.webp";
 
 export default function Features() {
 	const featuresData = [

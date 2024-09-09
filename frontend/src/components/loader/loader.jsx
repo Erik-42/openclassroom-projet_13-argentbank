@@ -1,7 +1,9 @@
-import React from 'react'
+import styled from "./loader.module.scss";
 
-export default function loader() {
-  return (
-    <div>loader</div>
-  )
+export default function Loader() {
+	return (
+		<div className={styled.loader}>
+			<div className={styled.spinner}></div>
+		</div>
+	);
 }
