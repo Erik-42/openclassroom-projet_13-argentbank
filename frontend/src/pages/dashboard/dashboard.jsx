@@ -21,6 +21,7 @@ export function Dashboard() {
 	};
 
 	useEffect(() => {
+		if (!token) return;
 		fetch("http://localhost:3001/api/v1/user/profile", {
 			headers: {
 				"content-type": "application/json",
@@ -29,15 +30,22 @@ export function Dashboard() {
 			method: "POST",
 			body: JSON.stringify({}),
 		})
-			.then((response) => response.json())
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error("Network response was not ok");
+				}
+				return response.json();
+			})
 			.then((data) => {
-				console.log(data.body);
 				dispatch(
 					setUser({
 						firstname: data.body.firstName,
 						lastname: data.body.lastName,
 					})
 				);
+			})
+			.catch((error) => {
+				console.error("Fetch error:", error);
 			});
 	}, [dispatch, token]);
 
